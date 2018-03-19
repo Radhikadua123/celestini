@@ -44,19 +44,15 @@ int main() {
 
 // Algorithm details are provided in the README.md for task 3.
 bool search(vector<vector<int>> &array, int p, int q, int item){
-  int flag = 0,r = 0;
-  while(p >= 0 && r < q) {
-    if(array[p][r] == item) {
-      flag = 1;
-      break;
-    }
-    else if(array[p][r] > item)
-      p--;
+  int rowIndex = 0, colIndex = q;
+  while(rowIndex < p && colIndex >= 0) {
+    if(array[rowIndex][colIndex] == item)
+      return true;
+    else if(array[rowIndex][colIndex] > item)
+      colIndex--;
     else
-      r++;
+      rowIndex++;
   }
-  if(flag)
-    return true;
   return false;
 }
 
