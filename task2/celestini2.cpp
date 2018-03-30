@@ -1,9 +1,8 @@
 //Celestini program 2
 #include<iostream>
-#define MAX 20
+#define MAX 100
 using namespace std;
 
-void transpose(int b1[][3], int trans_mat[][3]);
 void print_sparse_matrix(int b[MAX][3]);
 void read_sparse_matrix(int b[MAX][3]);
 void multiply(int mat1[MAX][3], int mat2[MAX][3], int result_mul[MAX][3]);
@@ -130,23 +129,6 @@ void fast_transpose(int matrix[MAX][3], int transpose_matrix[MAX][3]) {
   }
 } 
 
-void transpose(int mat[][3], int trans_mat[][3]) {
-  int i, j, k, n, m;
-  trans_mat[0][0] = mat[0][1];
-  trans_mat[0][1] = mat[0][0];
-  trans_mat[0][2] = mat[0][2];
-
-  k = 1;
-  n = mat[0][2];
-  for(i = 0;i <= mat[0][1]; i++)
-    for(j = 1;j <= n; j++)
-      if(i == mat[j][1]) {
-        trans_mat[k][0] = i;
-        trans_mat[k][1] = mat[j][0];
-        trans_mat[k][2] = mat[j][2];
-        k++;
-      }
-}
 
 //Function to convolve two matrices
 void convolution(int mat1[MAX][3], int mat2[MAX][3], int conv_mat[MAX][3]){
