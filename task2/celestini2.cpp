@@ -131,31 +131,31 @@ void fast_transpose(int matrix[MAX][3], int transpose_matrix[MAX][3]) {
 
 
 //Function to convolve two matrices
-void convolution(int mat1[MAX][3], int mat2[MAX][3], int conv_mat[MAX][3]){
+void convolution(int mat1[MAX][3], int mat2[MAX][3], int conv_mat[MAX][3]) {
   int i, j, sum;
   i = 1; j = 1; sum = 0; //i and j are the indices for the sparse matrices i.e mat1[][] and mat2[][] respectively.
   while(i <= mat1[0][2] && j <= mat2[0][2])
   {
-     if(mat1[i][0] == mat2[j][0]){
-	if( mat1[i][1] == mat2[j][1]){
-	  sum = sum + mat1[i][2]*mat2[j][2];
-	  i++;
-          j++;
-         }
-	else if( mat1[i][1] > mat2[j][1])
-	  j++;
-	else
-	  i++;
-	}
-     else if(mat1[i][0] > mat2[j][0])
-	j++;
-     else 
-	i++;
+    if(mat1[i][0] == mat2[j][0]){
+      if( mat1[i][1] == mat2[j][1]){
+        sum = sum + mat1[i][2]*mat2[j][2];
+        i++;
+        j++;
+      }
+      else if( mat1[i][1] > mat2[j][1])
+        j++;
+      else
+        i++;
+    }
+    else if(mat1[i][0] > mat2[j][0])
+      j++;
+    else 
+      i++;
   }
- conv_mat[0][0] = 1;
- conv_mat[0][1] = 1;
- conv_mat[0][2] = 1;
- conv_mat[1][0] = 1;
- conv_mat[1][1] = 1;
- conv_mat[1][2] = sum;
+  conv_mat[0][0] = 1;
+  conv_mat[0][1] = 1;
+  conv_mat[0][2] = 1;
+  conv_mat[1][0] = 1;
+  conv_mat[1][1] = 1;
+  conv_mat[1][2] = sum;
 }
