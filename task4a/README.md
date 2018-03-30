@@ -42,12 +42,8 @@ is used as the activation function at the output layer.
 * The accuracy metrics has been used as the performance metrics.
 
 ### Results
-* SVM 
-* rbf kernel
-![rbf](h"ttps://github.com/Radhikadua123/celestini/blob/ddbea884d67b4135b5bbb4287c5b03c25ebb4d7f/task4a/results/rbf.png")
-* polynomial kernel
-![polynomial](h"ttps://github.com/Radhikadua123/celestini/blob/ddbea884d67b4135b5bbb4287c5b03c25ebb4d7f/task4a/results/poly.png")
-* sigmoid kernel
-![sigmoid](h"ttps://github.com/Radhikadua123/celestini/blob/ddbea884d67b4135b5bbb4287c5b03c25ebb4d7f/task4a/results/sigomid.png")
-* Back propagation neural network
-![BPNN](h"ttps://github.com/Radhikadua123/celestini/blob/ddbea884d67b4135b5bbb4287c5b03c25ebb4d7f/task4a/results/bpnn.png")
+#### SVM 
+##### rbf kernel ![rbf](./results/rbf.png)
+##### polynomial kernel ![polynomial](./results/poly.png)
+##### sigmoid kernel ![sigmoid](./results/sigmoid.png)
+##### Back propagation neural network ![BPNN](./results/bpnn.png)
