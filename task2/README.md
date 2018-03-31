@@ -54,8 +54,9 @@ A sparse matrix is a matrix in which most of the elements are zero. In the progr
 
 ## Approach for multiplication of two sparse matrices
 To Multiply the matrices: <br />
-1. First calculate transpose of the second matrix to simply our comparisons and maintain the sorted order. <br /> 
-2. Traversing both matrices and summing the appropriate multiplied values. <br />
+ 1. First calculate transpose of the second matrix to simply our comparisons and maintain the sorted order. <br /> 
+ 2. Traversing both matrices and summing the appropriate multiplied values. <br />
+
 Resultant matrix obtained after multiplying two sparse matrices is represented by '''mul_mat'''. <br />
 Any element mul_mat[x][y] of the resultant matrix is obtained by multiplying all elements with row value equal to x in the first matrix and elements with row value equal to y in the second matrix (transposed one) and having the same column value in both matrices and  then adding them.
 
