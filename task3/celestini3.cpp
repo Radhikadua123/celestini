@@ -38,7 +38,10 @@ int main() {
   // Enter element to be searched
   cin>>item;
   bool ans = search(array, rows - 1, columns - 1, item);
-  cout<<ans<<"\n";
+  if(ans)
+	cout<<"true"<<"\n";
+  else
+	cout<<"false"<<"\n";
   return 0;
 }
 
