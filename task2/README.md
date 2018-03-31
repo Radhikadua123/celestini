@@ -5,7 +5,7 @@ Given two sparse matrices A and B, perform multiply and convolution operation of
 in their sparse form itself. The result should consist of two sparse matrices, one obtained by
 multiplying the two input matrices, and the other obtained by convolution of the two matrices.
 ### Sparse matrices
-A sparse matrix is a matrix in which most of the elements are zero. 
+A sparse matrix is a matrix in which most of the elements are zero. In the program, the sparse matrix used anywhere is sorted according to its row values. Two elements with the same row values are further sorted according to their column values.
 ## Input
  * Row 1 has 3 entries <br />
   No_rows: Number of rows in sparse matrix <br />
@@ -52,11 +52,11 @@ A sparse matrix is a matrix in which most of the elements are zero.
     1   1      645
     
 
-## Algorithm for multiplication of two sparse matrices
-1. Start with top right element.
-2. Compare the element val with x. <br />
-   a) If they are equal then return true. <br />
-   b) val < x then move it to down. <br />
-   c) val > x then move it to left. <br />
- 3. Repeat step 2 till you find element or till all rows and columns are traversed.
- 4. If x is not found return false.
+## Approach for multiplication of two sparse matrices
+To Multiply the matrices: <br />
+1. First calculate transpose of the second matrix to simply our comparisons and maintain the sorted order. <br /> 
+2. Traversing both matrices and summing the appropriate multiplied values. <br />
+Resultant matrix obtained after multiplying two sparse matrices is represented by '''mul_mat'''. <br />
+Any element mul_mat[x][y] of the resultant matrix is obtained by multiplying all elements with row value equal to x in the first matrix and elements with row value equal to y in the second matrix (transposed one) and having the same column value in both matrices and  then adding them.
+
+
