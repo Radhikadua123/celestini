@@ -22,7 +22,10 @@ Given target = 20, return false. <br />
 * Rows Columns
 * Array sorted left to right and top to bottom
 * Element x to be searched 
+## Output
+  Returns true if element searched is found, else it returns false.
 ### Example:
+    Input:
     5 5 
     1  4  7  11 15
     2  5  8  12 19
@@ -30,9 +33,9 @@ Given target = 20, return false. <br />
     10 13 14 17 24 
     18 21 23 26 30 
     5 
-   
-## Output
-  true
+    Output:
+    true
+
 ## Algorithm
 1. Start with top right element.
 2. Compare the element val with x. <br />
