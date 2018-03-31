@@ -53,7 +53,7 @@ A sparse matrix is a matrix in which most of the elements are zero. In the progr
     
 
 ## Approach for multiplication of two sparse matrices
-###To Multiply the matrices: <br />
+### To Multiply the matrices: <br />
  1. First calculate transpose of the second matrix to simply our comparisons and maintain the sorted order. <br /> 
  2. Traversing both matrices and summing the appropriate multiplied values. <br />
 
