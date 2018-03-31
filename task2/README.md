@@ -6,6 +6,8 @@ in their sparse form itself. The result should consist of two sparse matrices, o
 multiplying the two input matrices, and the other obtained by convolution of the two matrices.
 ### Sparse matrices
 A sparse matrix is a matrix in which most of the elements are zero. In the program, the sparse matrix used anywhere is sorted according to its row values. Two elements with the same row values are further sorted according to their column values.
+### Convolution
+Convolution is the process of adding each element one matrix to its local neighbors, weighted by the second matrix. This is related to a form of mathematical convolution. 
 ## Input
  * Row 1 has 3 entries <br />
   No_rows: Number of rows in sparse matrix <br />
@@ -53,11 +55,23 @@ A sparse matrix is a matrix in which most of the elements are zero. In the progr
     
 
 ## Approach for multiplication of two sparse matrices
-### To Multiply the matrices: <br />
+### To Multiply two sparse matrices: <br />
  1. First calculate transpose of the second matrix to simply our comparisons and maintain the sorted order. <br /> 
  2. Traversing both matrices and summing the appropriate multiplied values. <br />
 
 Resultant matrix obtained after multiplying two sparse matrices is represented by '''mul_mat'''. <br />
 Any element mul_mat[x][y] of the resultant matrix is obtained by multiplying all elements with row value equal to x in the first matrix and elements with row value equal to y in the second matrix (transposed one) and having the same column value in both matrices and  then adding them.
+### To Convolve two sparse matrices: <br />
+ 1. Start from row 2 of matrix 1 and 2. Initialize sum with 0. <br /> 
+ 2. Compare row_no of element in both matrix 1 and 2: <br />
+    a) if row_no both matrices are equal, compare column_no of element in both matrix 1 and 2:
+      i) if they are equal, then multiply them and add it in the sum variable.  <br /> 
+      ii)if column_no of matrix 1 is greater than column_no of matrix 2, then increment the row of sparse matrix 2.
+      iii) else increment the row of sparse matrix 1.
+    b)if row_no of matrix 1 is greater than row_no of matrix 2, then increment the row of sparse matrix 2.
+    c) else increment the row of sparse matrix 1 .
+  3. The sum is the convolution of two matrices.
+
+
 
 
