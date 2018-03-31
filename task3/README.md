@@ -8,13 +8,14 @@ following properties:
 
 ## Example,
 Consider the following matrix:
-[
-[1, 4, 7, 11, 15], <br />
-[2, 5, 8, 12, 19], <br />
-[3, 6, 9, 16, 22], <br />
-[10, 13, 14, 17, 24], <br />
-[18, 21, 23, 26, 30] <br />
-] <br />
+ <br />
+ [ <br />
+ [1, 4, 7, 11, 15], <br />
+ [2, 5, 8, 12, 19], <br />
+ [3, 6, 9, 16, 22], <br />
+ [10, 13, 14, 17, 24], <br />
+ [18, 21, 23, 26, 30] <br />
+ ] <br />
 Given target = 5, return true. <br />
 Given target = 20, return false. <br />
 
