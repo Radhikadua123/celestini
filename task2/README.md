@@ -7,7 +7,9 @@ multiplying the two input matrices, and the other obtained by convolution of the
 ### Sparse matrices
 A sparse matrix is a matrix in which most of the elements are zero. In the program, the sparse matrix used anywhere is sorted according to its row values. Two elements with the same row values are further sorted according to their column values.
 ### Convolution
-Convolution is the process of adding each element one matrix to its local neighbors, weighted by the second matrix. This is related to a form of mathematical convolution. 
+Convolution is the process of adding each element of one matrix to its local neighbors, weighted by the second matrix. This is related to a form of mathematical convolution.<br />
+To compute the output of this convolutional operation, first take the matrix 2 of dimension NxN and place it in the upper left most position of matrix 1. Then take each of these NXN numbers and multiply the corresponding numbers of both the matrices. Then add up all those numbers and this gives you this first number in the output, and then to compute the next output you take matrix 2 and slide it over by one. Here the size of both matrices is same, so in 1 pass the convolution is computed.
+
 ## Input
  * Row 1 has 3 entries <br />
   No_rows: Number of rows in sparse matrix <br />
